@@ -28,6 +28,9 @@ const strategy = new Auth0Strategy(
     // accessToken is the token to call Auth0 API (not needed in the most cases)
     // extraParams.id_token has the JSON Web Token
     // profile has all the information from the user
+    console.log('access token =>', accessToken);
+    console.log('refresh token =>', refreshToken);
+    console.log('id token =>', extraParams.id_token);
     return done(null, profile);
   }
 );
